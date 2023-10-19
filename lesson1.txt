@@ -1,0 +1,70 @@
+# message = 'good morning'
+# print(message[8])
+# message = message.upper() 
+# print(message[0:len(message)]) # ending point exluded and begining point include
+# message = message.replace('morning', 'afternoon')
+# print (message)
+def exo1():
+    w = input("Please, enter your weight in KG")
+    while type(w)!=float:
+        try :
+            w = float(w)
+        except :
+            w = input("Please, enter your weight in KG")
+
+    h =input("Please, enter your heigth in m")
+    while type(h)!=float:
+        try :
+            h = float(h)
+        except :
+            h = input("Please, enter your heigth in m")
+
+    bmi = w/h**2
+    if bmi <18.5:
+        print('underweight')
+    elif bmi<25 :
+        print('normal weight')
+    elif bmi<30:
+        print ('overweihgt')
+    else:
+        print('obesity')
+
+def exo2():
+    number = input("Please, enter a natural number")
+    while type(number)!=int:
+        try :
+            number = int(number)
+        except :
+            number = input("Please, enter a natural number")
+
+    number2 = input("Please, enter another natural number")
+    while type(number2)!=int:
+        try :
+            number2 = int(number2)
+        except :
+            number2 = input("Please, enter another natural number")
+    if number%number2==0:
+        print(number/number2)
+    else:
+        print(f"{number} is not divisible by {number2}")
+
+def exo3():
+    number = input("Please, enter the number of unit")
+    while type(number)!=int:
+        try :
+            number = int(number)
+        except :
+            number = input("Please, enter the number of unit")
+    price =0
+    if number <=100:
+        price +=0
+    elif number <=200:
+        price += (number-100)*5
+    else :
+        price += (number-200)*10 +500
+    print(f"the price is Rs{price}")
+
+
+#exo1()
+#exo2()
+#exo3()
